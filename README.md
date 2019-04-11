@@ -110,6 +110,7 @@ MIT Licensed. See [LICENSE](https://github.com/terraform-aws-modules/terraform-a
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| aws\_auth\_depends\_on | Make aws_auth depend on this. | list | `[]` | no |
 | cluster\_create\_security\_group | Whether to create a security group for the cluster or attach the cluster to `cluster_security_group_id`. | string | `"true"` | no |
 | cluster\_create\_timeout | Timeout value when creating the EKS cluster. | string | `"15m"` | no |
 | cluster\_delete\_timeout | Timeout value when deleting the EKS cluster. | string | `"15m"` | no |

@@ -251,3 +251,9 @@ variable "cluster_endpoint_public_access" {
   description = "Indicates whether or not the Amazon EKS public API server endpoint is enabled."
   default     = true
 }
+
+variable "aws_auth_depends_on" {
+  description = "Make aws_auth depend on this."
+  type        = "list"
+  default     = []
+}

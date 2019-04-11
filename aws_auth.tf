@@ -27,6 +27,7 @@ EOS
     kube_config_map_rendered = "${data.template_file.kubeconfig.rendered}"
     config_map_rendered      = "${data.template_file.config_map_aws_auth.rendered}"
     endpoint                 = "${aws_eks_cluster.this.endpoint}"
+    depends_on               = "${join(",", var.aws_auth_depends_on)}"
   }
 
   count = "${var.manage_aws_auth ? 1 : 0}"
